@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <h1>bounding box</h1>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <img id="img" alt="image" style="visibility: hidden; position: fixed;z-index: -10;">
+        <input type="file" id="file" name="file" accept="image/*" onchange="loadFile(event)" multiple>
+        <label for="name"></label>
+
+        <input type="text" id="name" name="name" value="">
+        <div class="btn">
+            <button id="prev">prev</button>
+            <button id="next">next</button>
+            <button id="clear">clear</button>
+        </div>
+        <button onclick="saveZip()">save</button>
+    </div>
+</body>
+<script src="FileSaver.js"></script>
+<script src="jszip.min.js"></script>
+<script src="main.js"></script>
+
+</html>
